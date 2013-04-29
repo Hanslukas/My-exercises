@@ -27,7 +27,7 @@ int main(void)
 struct nodo *inserisci(int i)
 {
 
-	struct nodo *aus, *last, *p;
+	struct nodo *aus, *last=NULL, *p=NULL;
 	int counter=0;
 
 	//Inserimento elementi nella lista fino alla fine
