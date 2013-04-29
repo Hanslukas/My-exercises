@@ -6,7 +6,7 @@ struct nodo{
 	struct nodo *next;
 };
 
-struct nodo * inserisci(int);
+struct nodo * inserisci_in_coda(int);
 void stampa(struct nodo*);
 
 int main(void)
@@ -17,14 +17,14 @@ int main(void)
 	printf("Quanti numeri vuoi inserire nella lista: ");
 	scanf("%d", &dim);
 
-	p=inserisci(dim);
+	p=inserisci_in_coda(dim);
 	stampa(p);
 	fflush(stdin);
 	getchar();
 	return 0;
 }
 
-struct nodo *inserisci(int i)
+struct nodo *inserisci_in_coda(int i)
 {
 
 	struct nodo *aus, *last=NULL, *p=NULL;
