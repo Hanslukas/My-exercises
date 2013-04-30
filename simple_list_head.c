@@ -33,8 +33,7 @@ int main(void)
 
 struct nodo *inserisci_in_testa(struct nodo *p, int val)
 {
-	struct nodo *aus;
-	int num;
+	struct nodo *aus=NULL
 	aus = (struct nodo*) malloc (sizeof(struct nodo));
 	aus->numero = val;
 	aus->next = p;
