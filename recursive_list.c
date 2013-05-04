@@ -6,8 +6,7 @@ struct nodo{
 	struct nodo *next;
 };
 
-struct nodo * inserisci_in_testa_ricorsivo(struct nodo *, int);
-struct nodo * inserisci_in_coda_ricorsivo(int, int);
+void inserisci_ricorsivo_ordinato(struct nodo **, int);
 void stampa_ricorsivo(struct nodo*);
 
 int main(void)
@@ -21,7 +20,7 @@ int main(void)
 
 	while(num!=0)
 	{	
-		p=inserisci_in_testa_ricorsivo(p,num);
+		inserisci_ricorsivo_ordinato(&p,num);
 		printf("Inserisci numero: ");
 		scanf("%d", &num);
 	}
@@ -36,6 +35,29 @@ fflush(stdin);
 	return 0;
 }
 
+void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
+  struct nodo *s, *t;
+
+			/* caso di lista vuota */
+  if(*p==NULL) {
+    *p=  malloc(sizeof(struct nodo));
+    (*p)->numero = val;
+    (*p)->next=NULL;
+    return;
+  }
+
+			/* l'elemento va messo in prima posizione */
+  if(((*p)->numero) > val) {
+    s= malloc(sizeof(struct nodo));
+    s->numero=val;
+    s->next=*p;
+    *p=s;
+    return;
+  }
+
+			/* l'elemento va aggiunto al resto della lista */
+  inserisci_ricorsivo_ordinato(&(*p)->next, val);
+}
 
 
 void stampa_ricorsivo(struct nodo *p)
