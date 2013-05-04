@@ -25,8 +25,6 @@ int main(void)
 		scanf("%d", &num);
 	}
 
-	//copia = copia_L_pari(p);
-
 	stampa_ricorsivo(p);
 	printf("\n");
 
@@ -36,7 +34,7 @@ fflush(stdin);
 }
 
 void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
-  struct nodo *s, *t;
+  struct nodo *s=NULL, *t=NULL;
 
 			/* caso di lista vuota */
   if(*p==NULL) {
