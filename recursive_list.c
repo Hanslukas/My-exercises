@@ -37,7 +37,8 @@ void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
   struct nodo *s=NULL;
 
 			/* caso di lista vuota */
-  if(*p==NULL) {
+  if(*p==NULL) 
+  {
     *p=  malloc(sizeof(struct nodo));
     (*p)->numero = val;
     (*p)->next=NULL;
@@ -45,7 +46,8 @@ void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
   }
 
 			/* l'elemento va messo in prima posizione */
-  if(((*p)->numero) > val) {
+  if(((*p)->numero) > val) 
+  {
     s= malloc(sizeof(struct nodo));
     s->numero=val;
     s->next=*p;
