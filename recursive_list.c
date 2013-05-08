@@ -34,7 +34,7 @@ fflush(stdin);
 }
 
 void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
-  struct nodo *s=NULL, *t=NULL;
+  struct nodo *s=NULL;
 
 			/* caso di lista vuota */
   if(*p==NULL) {
