@@ -12,7 +12,7 @@ void stampa_ricorsivo(struct nodo*);
 int main(void)
 {
   int num;
-	struct nodo *p=NULL, *copia=NULL;
+	struct nodo *p=NULL;
 
 	printf("Inserisci numero (0 per terminare): ");
 	scanf("%d", &num);
@@ -39,7 +39,7 @@ void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
 			/* caso di lista vuota */
   if(*p==NULL) 
   {
-    *p=  malloc(sizeof(struct nodo));
+    *p= (struct nodo*) malloc(sizeof(struct nodo));
     (*p)->numero = val;
     (*p)->next=NULL;
     return;
