@@ -21,7 +21,7 @@ int main(void)
 	while(num!=0)
 	{	
 		inserisci_ricorsivo_ordinato(&p,num);
-		printf("Inserisci numero: ");
+		printf("Inserisci numero (0 per terminare): ");
 		scanf("%d", &num);
 	}
 
