@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 struct nodo{
-  int numero;
+  	int numero;
 	struct nodo *next;
 };
 
@@ -11,7 +11,7 @@ void stampa_ricorsivo(struct nodo*);
 
 int main(void)
 {
-  int num;
+  	int num;
 	struct nodo *p=NULL;
 
 	printf("Inserisci numero (0 per terminare): ");
@@ -28,12 +28,13 @@ int main(void)
 	stampa_ricorsivo(p);
 	printf("\n");
 
-fflush(stdin);
-  getchar();
+	fflush(stdin);
+  g	etchar();
 	return 0;
 }
 
-void inserisci_ricorsivo_ordinato(struct nodo **p, int val) {
+void inserisci_ricorsivo_ordinato(struct nodo **p, int val) 
+{
   struct nodo *s=NULL;
 
 			/* caso di lista vuota */
